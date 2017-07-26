@@ -1,0 +1,925 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Localization with webpack and c-3po · c-3po javascript es6 localization tool</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="translations-without-transpile.html" />
+    
+    
+    <link rel="prev" href="quick-start.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"c-3po-org/c-3po","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">General</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration(babel plugin)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="configuration-c-3po-lib.html">
+            
+                <a href="configuration-c-3po-lib.html">
+            
+                    
+                    Configuration(c-3po lib API)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="translator-comments.html">
+            
+                <a href="translator-comments.html">
+            
+                    
+                    Leaving comments for the translator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="multiline-strings.html">
+            
+                <a href="multiline-strings.html">
+            
+                    
+                    Multiline strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="aliasing.html">
+            
+                <a href="aliasing.html">
+            
+                    
+                    Aliasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="c-3po-ignore.html">
+            
+                <a href="c-3po-ignore.html">
+            
+                    
+                    Ignoring code blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">functions</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="tag-gettext--t-.html">
+            
+                <a href="tag-gettext--t-.html">
+            
+                    
+                    t (tag-gettext)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ngettext.html">
+            
+                <a href="ngettext.html">
+            
+                    
+                    ngettext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="jsx-tag-jt.html">
+            
+                <a href="jsx-tag-jt.html">
+            
+                    
+                    jt (jsx-gettext)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="gettext.html">
+            
+                <a href="gettext.html">
+            
+                    
+                    gettext
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="quick-start.html">
+            
+                <a href="quick-start.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="localization-with-webpack-and-c-3po.html">
+            
+                <a href="localization-with-webpack-and-c-3po.html">
+            
+                    
+                    Localization with webpack and c-3po
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="translations-without-transpile.html">
+            
+                <a href="translations-without-transpile.html">
+            
+                    
+                    Translate without translpile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">FAQ</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="why-use-msgid-for-ngettext.html">
+            
+                <a href="why-use-msgid-for-ngettext.html">
+            
+                    
+                    Why to use msgid tag for ngettext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="why-po-is-not-updated.html">
+            
+                <a href="why-po-is-not-updated.html">
+            
+                    
+                    Why .pot(.po) file is not generated/updated
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="CHANGELOG.html">
+            
+                <a href="CHANGELOG.html">
+            
+                    
+                    CHANGELOG
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="MIGRATION.html">
+            
+                <a href="MIGRATION.html">
+            
+                    
+                    Migration Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Localization with webpack and c-3po</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="localization-with-webpack-and-c-3po">Localization with webpack and c-3po</h1>
+<p>This short tutorial will demonstrate how c-3po can be used with webpack.
+Both development and production setups will be described.</p>
+<!-- toc -->
+<ul>
+<li><a href="#1-initial-setup">1. Initial setup</a><ul>
+<li><a href="#11-why-should-i-care-about-dev-and-prod-setup">1.1 Why should I care about dev and prod setup?</a></li>
+<li><a href="#12-application-overview">1.2 Application overview</a></li>
+<li><a href="#13-installation">1.3 Installation</a></li>
+<li><a href="#14-basic-app-setup">1.4 Basic app setup</a></li>
+<li><a href="#15-wrapping-strings-with-c-3po-functions-and-tags">1.5 Wrapping strings with c-3po functions and tags</a></li>
+<li><a href="#2-extracting-translations-to-the-pot-file">2. Extracting translations to the .pot file</a></li>
+</ul>
+</li>
+<li><a href="#3-add-locale-po-file">3. Add locale (.po file)</a></li>
+<li><a href="#4-localization-with-dev-setup">4. Localization with dev setup</a></li>
+<li><a href="#5-localization-with-production-setup">5. Localization with production setup</a><ul>
+<li><a href="#51-making-separate-build-for-each-locale">5.1 Making separate build for each locale</a></li>
+<li><a href="#51-replacing-c-3po-lib-with-mock">5.1 Replacing c-3po lib with mock</a></li>
+</ul>
+</li>
+<li><a href="#6-results-comparison">6. Results comparison</a></li>
+</ul>
+<!-- toc stop -->
+<h2 id="1-initial-setup">1. Initial setup</h2>
+<h3 id="11-why-should-i-care-about-dev-and-prod-setup">1.1 Why should I care about dev and prod setup?</h3>
+<p>There are different requirements to development and production setups.</p>
+<p>Requirements for the dev setup:</p>
+<ol>
+<li>Faster builds.</li>
+<li>Simple setup.</li>
+<li>Fast feedback.</li>
+</ol>
+<p>Prod. setup:</p>
+<ol>
+<li>Smaller assets.</li>
+<li>Less work to load locale (faster locale load).</li>
+</ol>
+<p>According to this requirements, c-3po provides you options for making
+efficient production and development setups.</p>
+<h3 id="12-application-overview">1.2 Application overview</h3>
+<p>For demonstration purposes, we will implement simple clock application.
+Something like implemented <a href="https://jsfiddle.net/AlexMost/9wuafbL5/7/" target="_blank">here</a>.</p>
+<p>Sources - <a href="https://github.com/c-3po-org/c-3po/tree/master/examples/webpack-setup" target="_blank">here</a></p>
+<h3 id="13-installation">1.3 Installation</h3>
+<ol>
+<li>Firstly we need to create separate folder run <strong>npm init </strong>and  execute <a href="chapter1.html">installation</a> instructions.<pre><code class="lang-bash">npm install --save c-3po &amp;&amp; npm install --save-dev babel-plugin-c-3po
+</code></pre>
+</li>
+<li>Also we need to install webpack and babel loader for the webpack.<blockquote>
+<p>just following install instructions from <a href="https://github.com/babel/babel-loader" target="_blank">here</a></p>
+<pre><code class="lang-bash">npm install babel-loader babel-core babel-preset-env webpack --save-dev
+</code></pre>
+</blockquote>
+</li>
+</ol>
+<h3 id="14-basic-app-setup">1.4 Basic app setup</h3>
+<p>Now we are ready to make a basic setup for our application. It will consist of index.html 
+file and app.js. Let&apos;s add <strong>./dist</strong> directory and add <strong>index.html</strong> there:</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Webpack with c-3po demo<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./app.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Nothing special, just some html boilerplate.</p>
+<p>Let&apos;s add <strong>app.js</strong> file also, that will contain our simple business logic:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { ngettext, msgid, t } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;c-3po&apos;</span>;
+<span class="hljs-keyword">const</span> content = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;content&apos;</span>);
+
+<span class="hljs-keyword">const</span> view = (hours, minutes, seconds) =&gt; {
+    <span class="hljs-keyword">const</span> hoursTxt = <span class="hljs-string">`<span class="hljs-subst">${hours}</span> hours`</span>;
+    <span class="hljs-keyword">const</span> minutesTxt = <span class="hljs-string">`<span class="hljs-subst">${minutes}</span> minutes`</span>;
+    <span class="hljs-keyword">const</span> secondsTxt = <span class="hljs-string">`<span class="hljs-subst">${seconds}</span> seconds`</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`
+    &lt;h1&gt;<span class="hljs-subst">${ t`webpack with c-3po localization demo` }</span>&lt;/h1&gt;
+    &lt;h2&gt;<span class="hljs-subst">${ t`Current time is` }</span>&lt;/h2&gt;
+    &lt;h3&gt;<span class="hljs-subst">${hoursTxt}</span> <span class="hljs-subst">${minutesTxt}</span> <span class="hljs-subst">${secondsTxt}</span>&lt;/h3&gt;
+    `</span>
+};
+
+
+setInterval(() =&gt; {
+    <span class="hljs-keyword">const</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    content.innerHTML = view(date.getHours(), date.getMinutes(), date.getSeconds());
+}, <span class="hljs-number">1000</span>);
+</code></pre>
+<p>This is simple program that will display the current time:</p>
+<blockquote>
+<p><img src="assets/webpack-demo-2.jpg" alt="Local image"></p>
+</blockquote>
+<p>Let&apos;s make setup for webpack. Here is our <strong>webpack.config.js</strong>:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    entry: <span class="hljs-string">&apos;./app.js&apos;</span>,
+    output: { filename: <span class="hljs-string">&apos;./dist/app.js&apos;</span> },
+    <span class="hljs-built_in">module</span>: {
+        rules: [
+            {
+              test: <span class="hljs-regexp">/\.js$/</span>,
+              exclude: <span class="hljs-regexp">/(node_modules|bower_components)/</span>,
+              use: { loader: <span class="hljs-string">&apos;babel-loader&apos;</span> }
+           }
+        ]
+    }
+}
+</code></pre>
+<p>And now we can execute <strong>webpack</strong> to build our <strong>app.js</strong> file and open index.html in a browser.</p>
+<h3 id="15-wrapping-strings-with-c-3po-functions-and-tags">1.5 Wrapping strings with c-3po functions and tags</h3>
+<p>Let&apos;s wrap our literals in <strong>ngettext</strong> and <strong>t</strong>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { ngettext, msgid, t } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;c-3po&apos;</span>;
+
+<span class="hljs-keyword">const</span> view = (hours, minutes, seconds) =&gt; {
+    <span class="hljs-keyword">const</span> hoursTxt = ngettext(msgid<span class="hljs-string">`<span class="hljs-subst">${hours}</span> hour`</span>, <span class="hljs-string">`<span class="hljs-subst">${hours}</span> hours`</span>, hours);
+    <span class="hljs-keyword">const</span> minutesTxt = ngettext(msgid<span class="hljs-string">`<span class="hljs-subst">${minutes}</span> minute`</span>, <span class="hljs-string">`<span class="hljs-subst">${minutes}</span> minutes`</span>, minutes);
+    <span class="hljs-keyword">const</span> secondsTxt = ngettext(msgid<span class="hljs-string">`<span class="hljs-subst">${seconds}</span> second`</span>, <span class="hljs-string">`<span class="hljs-subst">${seconds}</span> seconds`</span>, seconds);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`
+    &lt;h1&gt;<span class="hljs-subst">${ t`webpack with c-3po localization demo` }</span>&lt;/h1&gt;
+    &lt;h2&gt;<span class="hljs-subst">${ t`Current time is` }</span>&lt;/h2&gt;
+    &lt;h3&gt;<span class="hljs-subst">${hoursTxt}</span> <span class="hljs-subst">${minutesTxt}</span> <span class="hljs-subst">${secondsTxt}</span>&lt;/h3&gt;
+    `</span>
+};
+</code></pre>
+<blockquote>
+<p>more about ngettext - <a href="ngettext.html">here</a> and about t - <a href="tag-gettext--t-.html">here</a></p>
+</blockquote>
+<p>Let&apos;s rebuild webpack and see what do we have in a browser:</p>
+<blockquote>
+<p><img src="assets/webpack-demo-3.png" alt="Local image"></p>
+</blockquote>
+<p>You can notice that plural forms are working without any extra configuration (<code>1 second</code> is displayed properly).
+This behaves so because c-3po uses English locale by default.</p>
+<h3 id="2-extracting-translations-to-the-pot-file">2. Extracting translations to the .pot file</h3>
+<p>Let&apos;s extract our translations to template file (.pot). c-3po will extract translations only if it has
+<strong><a href="configuration.html#configextractoutput-string">extract.output</a></strong> setting, 
+let&apos;s modify our webpack.config.js to be able to work in the extract mode.</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = ({ extract } = {}) =&gt; { <span class="hljs-comment">// webpack 2 can accept env object</span>
+    <span class="hljs-keyword">const</span> c3po = {};
+
+    <span class="hljs-keyword">if</span> (extract) {
+        c3po.extract = { output: <span class="hljs-string">&apos;template.pot&apos;</span>} <span class="hljs-comment">// translations will be extracted to template.pot</span>
+    }
+
+    <span class="hljs-keyword">return</span> {
+        entry: <span class="hljs-string">&apos;./app.js&apos;</span>,
+        output: {
+            filename: <span class="hljs-string">&apos;./dist/app.js&apos;</span>
+        },
+        <span class="hljs-built_in">module</span>: {
+            rules: [
+                {
+                    test: <span class="hljs-regexp">/\.(js|jsx)$/</span>,
+                    use: {
+                        loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+                        options: {plugins: [[<span class="hljs-string">&apos;c-3po&apos;</span>, c3po]]}
+                    }
+                }
+            ]
+        }
+    }
+};
+</code></pre>
+<p>Let&apos;s extract translated strings by executing <code>webpack --env.extract</code>.</p>
+<p>The resulting extracted .pot file:</p>
+<pre><code>msgid &quot;&quot;
+msgstr &quot;&quot;
+&quot;Content-Type: text/plain; charset=utf-8\n&quot;
+&quot;Plural-Forms: nplurals=2; plural=(n!=1);\n&quot;
+
+#: app.js:5
+msgid &quot;${ hours } hour&quot;
+msgid_plural &quot;${ hours } hours&quot;
+msgstr[0] &quot;&quot;
+msgstr[1] &quot;&quot;
+
+#: app.js:6
+msgid &quot;${ minutes } minute&quot;
+msgid_plural &quot;${ minutes } minutes&quot;
+msgstr[0] &quot;&quot;
+msgstr[1] &quot;&quot;
+
+#: app.js:7
+msgid &quot;${ seconds } second&quot;
+msgid_plural &quot;${ seconds } seconds&quot;
+msgstr[0] &quot;&quot;
+msgstr[1] &quot;&quot;
+
+#: app.js:10
+msgid &quot;webpack with c-3po localization demo&quot;
+msgstr &quot;&quot;
+
+#: app.js:11
+msgid &quot;Current time is&quot;
+msgstr &quot;&quot;
+</code></pre><h2 id="3-add-locale-po-file">3. Add locale (.po file)</h2>
+<p>Let&apos;s add Ukrainian locale - uk. We can use <code>msginit</code> tool for creation of .po file with all
+appropriate to uk locale headers:</p>
+<pre><code class="lang-bash">msginit -i template.pot -o uk.po <span class="hljs-_">-l</span> uk
+</code></pre>
+<p>or you can just coppy paste it from the <a href="https://github.com/c-3po-org/c-3po/blob/master/examples/webpack-setup/uk.po" target="_blank">sources</a>.</p>
+<p>If you havn&apos;t coppy pasted <code>uk.po</code> from the sources - the next step will be to add translations to uk.po.
+Translations can be added by translators (nontechnical persons) and developers.
+It&apos;s up to your process.</p>
+<p>Here are translations:</p>
+<pre><code>#: app.js:5
+msgid &quot;${ hours } hour&quot;
+msgid_plural &quot;${ hours } hours&quot;
+msgstr[0] &quot;${ hours } &#x433;&#x43E;&#x434;&#x438;&#x43D;&#x430;&quot;
+msgstr[1] &quot;${ hours } &#x433;&#x43E;&#x434;&#x438;&#x43D;&#x438;&quot;
+msgstr[2] &quot;${ hours } &#x433;&#x43E;&#x434;&#x438;&#x43D;&quot;
+
+#: app.js:6
+msgid &quot;${ minutes } minute&quot;
+msgid_plural &quot;${ minutes } minutes&quot;
+msgstr[0] &quot;${ minutes } &#x445;&#x432;&#x438;&#x43B;&#x438;&#x43D;&#x430;&quot;
+msgstr[1] &quot;${ minutes } &#x445;&#x432;&#x438;&#x43B;&#x438;&#x43D;&#x438;&quot;
+msgstr[2] &quot;${ minutes } &#x445;&#x432;&#x438;&#x43B;&#x438;&#x43D;&quot;
+
+#: app.js:7
+msgid &quot;${ seconds } second&quot;
+msgid_plural &quot;${ seconds } seconds&quot;
+msgstr[0] &quot;${ seconds } &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x430;&quot;
+msgstr[1] &quot;${ seconds } &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&#x438;&quot;
+msgstr[2] &quot;${ seconds } &#x441;&#x435;&#x43A;&#x443;&#x43D;&#x434;&quot;
+
+#: app.js:10
+msgid &quot;webpack with c-3po localization demo&quot;
+msgstr &quot;&#x414;&#x435;&#x43C;&#x43E; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x456;&#x437;&#x430;&#x446;&#x456;&#x457; &#x437; c-3po &#x442;&#x430; webpack&quot;
+
+#: app.js:11
+msgid &quot;Current time is&quot;
+msgstr &quot;&#x41F;&#x43E;&#x442;&#x43E;&#x447;&#x43D;&#x438;&#x439; &#x447;&#x430;&#x441;&quot;
+</code></pre><blockquote>
+<p>In future you will add more string literals to your app, and you will need to update .po files.
+I suggest using <code>msgmerge</code> for that. Here is an example:</p>
+<pre><code class="lang-bash">msgmerge uk.po template.pot -U
+</code></pre>
+</blockquote>
+<h2 id="4-localization-with-dev-setup">4. Localization with dev setup</h2>
+<p>As I mentioned earlier, the requirements for the dev setup are:</p>
+<ol>
+<li>Faster builds.</li>
+<li>Simple setup.</li>
+<li>Fast feedback loop (validation).</li>
+</ol>
+<p>To be able to use our translation we need to load .po file somehow.</p>
+<p>Let&apos;s use <a href="https://www.npmjs.com/package/po-gettext-loader" target="_blank">po-gettext-loader</a></p>
+<pre><code class="lang-sh">npm install --save-dev po-gettext-loader json-loader
+</code></pre>
+<p>Ok, we are ready to load our translations via loader, let&apos;s
+modify webpack config:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = ({ extract } = {}) =&gt; { <span class="hljs-comment">// webpack 2 can accept env object</span>
+    <span class="hljs-comment">// ... </span>
+
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-comment">// ...</span>
+        <span class="hljs-built_in">module</span>: {
+            rules: [
+                <span class="hljs-comment">// ...</span>
+                { test: <span class="hljs-regexp">/\.po$/</span>, loader: <span class="hljs-string">&apos;json-loader!po-gettext-loader&apos;</span> }
+            ]
+        },
+        plugins: [
+            <span class="hljs-keyword">new</span> webpack.DefinePlugin(
+                { <span class="hljs-string">&apos;process.env.NODE_ENV&apos;</span>: <span class="hljs-built_in">JSON</span>.stringify(process.env.NODE_ENV || <span class="hljs-string">&apos;debug&apos;</span>) }
+            )
+        ]
+    }
+};
+</code></pre>
+<p>A couple of changes here:</p>
+<ol>
+<li>Use json loader after po loader, because we need our translations object to be used on the client-side.</li>
+<li>Added DefinePlugin to be able to split dev and prod logic inside the app.</li>
+</ol>
+<p>After this step, we can simply require <code>uk.po</code> file and apply <code>uk</code> locale on the application start.</p>
+<p>Let&apos;s create a separate <strong>localeSetup.js</strong> file:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { addLocale, useLocale } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;c-3po&apos;</span>;
+<span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+    <span class="hljs-keyword">const</span> ukLocale = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./uk.po&apos;</span>);
+    addLocale(<span class="hljs-string">&apos;uk&apos;</span>, ukLocale);
+    useLocale(<span class="hljs-string">&apos;uk&apos;</span>);   
+}
+</code></pre>
+<blockquote>
+<p>Notice that locale init logic is wrapped with the if condition, because we need that logic only during the dev setup.
+In the production mode all assets will be already translated on a build step.</p>
+</blockquote>
+<p>After that we need to <code>import</code> <strong>localeSetup.js</strong> at the top of <strong>app.js</strong> file:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./localeSetup&apos;</span>;
+</code></pre>
+<p><strong><code>import &apos;./localeSetup&apos;</code> must be the first import in your entry bundle, to setup locale before other exports evaluation</strong>. 
+As you know, es6 exports are evaluated before module execution. So, to apply translations
+to exported values also, we need to make locale setup as soon as possible.</p>
+<p>Let&apos;s build our app with <code>npm run build</code> and you will see that all translations are applied.
+And here is what we can see in the browser:</p>
+<blockquote>
+<p><img src="assets/webpack-demo-4.png" alt="Local image"></p>
+</blockquote>
+<p>A few cool things here:</p>
+<ol>
+<li>Translations are working.</li>
+<li>You can run webpack in watch mode and it will watch for changes in .po files and will rebuild app if
+some translation is added/changed.</li>
+<li><a href="validation.html">Validation</a> is also working, just great!</li>
+</ol>
+<p>I hope you have understood the main idea of how we can load locale in dev mode. In the real app, you will don&apos;t know
+what locale is selected on a build step, so you may decide to place it somewhere in the initial app state or pass it
+through some global var, or you can use webpack code splitting features and load it
+asynchronously, it&apos;s up to your application requirements and design.</p>
+<h2 id="5-localization-with-production-setup">5. Localization with production setup</h2>
+<p>The main requirement for production setup are:</p>
+<ol>
+<li>Smaller resulting assets.</li>
+<li>Less work on a client to load locale.</li>
+</ol>
+<p><strong>babel-plugin-c3po</strong> allows you to precompile all your translations in the resulting bundles in compile time.
+It will strip all c-3po tags and functions and place all translations on their places. Little pay for
+that feature is that we should make a separate build for each locale. I think it&apos;s not a big trade off for
+making your end user happier.</p>
+<p><strong>babel-pugin-c-3po</strong> will apply translations from some locale if <strong><a href="configuration.html#configresolvetranslations-string">resolve.translations</a></strong> 
+setting is present. <strong>resolve.translations</strong> must be set to the path to the <strong>.po</strong> file.
+One thing to note here
+is that we also should strip c-3po tags and functions for the default locale. Default locale is
+resolved when <strong>resolve.translations</strong> is set with the &apos;default&apos; value.</p>
+<h3 id="51-making-separate-build-for-each-locale">5.1 Making separate build for each locale</h3>
+<p>Let&apos;s modify our webpack config in a way that it can configure c-3po options to make an
+appropriate transformations for some locale.</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = ({ extract, locale } = {}) =&gt; {
+    <span class="hljs-keyword">const</span> c3po = {};
+
+    <span class="hljs-keyword">if</span> (locale) { <span class="hljs-comment">// we should pass default for the default locale.</span>
+        c3po.resolve = { translations: locale !== <span class="hljs-string">&apos;default&apos;</span> ? <span class="hljs-string">`<span class="hljs-subst">${locale}</span>.po`</span> : <span class="hljs-string">&apos;default&apos;</span> };
+    }
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>Let&apos;s also change the resulting output filename to be able to compare it with the previous versions:</p>
+<pre><code class="lang-js">output: {
+    filename: locale ? <span class="hljs-string">`./dist/app_<span class="hljs-subst">${locale}</span>.js`</span> : <span class="hljs-string">&apos;./dist/app.js&apos;</span>
+}
+</code></pre>
+<p>Let&apos;s build localized assets with commands <code>webpack --env.locale=uk &amp;&amp; webpack --env.locale=default</code>.</p>
+<blockquote>
+<p>If you are still using webpack 1, you can use simple env vars instead of
+webpack env. For example: <code>LOCALE=uk webpack &amp;&amp; LOCLE=default webpack</code>.</p>
+</blockquote>
+<p>To see that it works le&apos;ts modify scr attribute in <em>index.html</em>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./app_default.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>and</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./app_uk.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>This step is done manually just for the demo purposes, in the real world url will be modified
+somewhere on a backend that renders HTML output.</p>
+</blockquote>
+<h3 id="51-replacing-c-3po-lib-with-mock">5.1 Replacing c-3po lib with mock</h3>
+<p>So, if we are placing all transactions at a build time there is no need to include the original
+c-3po library in the resulting bundle. There is special mock for that case 
+inside c-3po lib - <em>c-3po/dist/mock</em>. </p>
+<p>Let&apos;s add a webpack alias for that:</p>
+<pre><code class="lang-js">resolve: {
+    alias: {
+        <span class="hljs-string">&apos;c-3po&apos;</span>: locale ? <span class="hljs-string">&apos;c-3po/dist/mock&apos;</span> : <span class="hljs-string">&apos;c-3po&apos;</span>
+    }
+}
+</code></pre>
+<p>This will minimize the resulting bundle size. Don&apos;t forget to use <strong>NODE_ENV=production</strong> to avoid translations to be
+bundled in the resulting assets.</p>
+<h2 id="6-results-comparison">6. Results comparison</h2>
+<p>let&apos;s build all variants and compare the output size</p>
+<pre><code class="lang-bash">webpack &amp;&amp; NODE_ENV=production webpack --env.locale=uk &amp;&amp; NODE_ENV=production webpack --env.locale=default
+</code></pre>
+<p>The resulting files inside <strong>./dist</strong>:</p>
+<pre><code class="lang-bash">17K app.js
+5,5K app_default.js
+6,1K app_uk.js
+</code></pre>
+<p>Minified versions:</p>
+<pre><code class="lang-bash">6.9K app.js
+1.8K app_default.js
+1.9K app_uk.js
+</code></pre>
+<p>As you can see production setup reduced the resulting bundle size.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="quick-start.html" class="navigation navigation-prev " aria-label="Previous page: Quick Start">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="translations-without-transpile.html" class="navigation navigation-next " aria-label="Next page: Translate without translpile">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Localization with webpack and c-3po","level":"3.2","depth":1,"next":{"title":"Translate without translpile","level":"3.3","depth":1,"path":"translations-without-transpile.md","ref":"translations-without-transpile.md","articles":[]},"previous":{"title":"Quick Start","level":"3.1","depth":1,"path":"quick-start.md","ref":"quick-start.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchorjs","github-buttons","github-edit","ga","toc"],"root":"./gitbook","styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"toc":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"github-edit":{"repo":"c-3po-org/c-3po","branch":"master"},"github-buttons":{"repo":"c-3po-org/c-3po","types":["star"],"size":"small"},"ga":{"configuration":"auto","token":"UA-90721450-1"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"edit-link":{"base":"https://github.com/c-3po-org/c-3po/edit/master/gitbook","label":"Edit This Page"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"c-3po javascript es6 localization tool","gitbook":"*"},"file":{"path":"localization-with-webpack-and-c-3po.md","mtime":"2017-04-27T15:21:21.549Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-26T14:22:42.233Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-edit/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
